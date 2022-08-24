@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<hr>
+<div class="row">
+    <div style=" margin-top:5px;margin-bottom:10px">
+        <div  style="float:right;">
+            <button type="button" class="btn btn-primary b-1" data-bs-toggle="modal" data-bs-target="#adddoctor">
+                + Add Profile
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="adddoctor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="adddoctor" aria-hidden="true">
+  <app-doctor-detail></app-doctor-detail>
+</div>
+
+<div class="container">
+    <div  *ngFor="let doctor of doctorList" class="card mb-6" style="max-width: 80%;margin-left:10%;margin-bottom: 2%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{doctor.imgURL}}" class="img-fluid rounded-start" style="height:100%; width:auto">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Name :</b>{{doctor.name}}</h4>
+                    <h4 class="card-title"><b>Mobile No :</b>{{doctor.mobileNo}}</h4>
+                    <h4 class="card-title"><b>Degree :</b>{{doctor.degree}}</h4>
+                    <h4 class="card-title"><b>Field of Specialization :</b>{{doctor.fos}}</h4>
+                    <h4 class="card-title"><b>Address :</b>{{doctor.address}}</h4>
+                    <h4 class="card-title"><b>Service :</b>{{doctor.service}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

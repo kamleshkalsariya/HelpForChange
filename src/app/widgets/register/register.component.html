@@ -1,0 +1,125 @@
+<div class="container-fluid" *ngIf="!isConfirm">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class=" login  col-md-6 shadow-lg p-3 mb-5 bg-white">
+          <div class="text-center text-dark"><br>
+              <img src='../../../assets/logo.png' class="" width="60%">
+          </div><br>
+          <form (ngSubmit)="onSignup()" #f="ngForm">
+
+            <div class="form-group input-container">
+              <input type="email" name="email" id="email" ngModel [(ngModel)]="email_address" class="form-control input-field"
+                placeholder="Email address" required>
+            </div>
+
+            <div class="form-group input-container">
+              <input type="password" name="password" id="password" ngModel [(ngModel)]="password" placeholder="Enter your password"
+                class="form-control input-field" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-block" style="background: #7380E4;">
+                Register</button>
+            </div>
+            <br>
+            <div *ngIf="failed_registration" style="color: red; padding-bottom: 15px;">Registration Failed , please ensure your password contain Contains at least 1 number, 1 lowercase letter and at least 6 character</div>
+          <div>
+            <a class = "link" routerLink="/signIn">
+            <div class="text-center">Already have an account? &nbsp;</div>
+              </a>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+
+<div class="container-fluid" *ngIf="isConfirm">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class=" login  col-md-6 shadow-lg p-3 mb-5 bg-white">
+          <div class="text-center text-dark"><br>
+              <h2>Verification code</h2>
+          </div><br>
+          <form (ngSubmit)="confirmSignUp()" #f="ngForm">
+
+            <div class="form-group input-container">
+              <input type="code" name="code" id="code" ngModel [(ngModel)]="verificationCode" class="form-control input-field"
+                placeholder="Verification Code" required>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-block" style="background: #7380E4;">
+                submit</button>
+            </div>
+            <br>
+            <div *ngIf="failed_registration" style="color: red; padding-bottom: 15px;">Registration Failed , please ensure your password contain Contains at least 1 number, 1 lowercase letter and at least 6 character</div>
+          <div>
+            <a class = "link">
+            <div class="text-center">Resend Code</div>
+            </a>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+
+<!-- <div class="row justify-content-center my-5">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body" *ngIf="!isConfirm">
+        <div class="row">
+          <div class="col mb-2">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="Email" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <label for="password" class="form-label">Password:</label>
+            <div class="input-group input-group-sm">
+              <input [type]="showPassword ? 'text' : 'password'" id="password" name="password" #password="ngModel" [(ngModel)]="Password" class="form-control form-control-sm">
+              <button type="button" class="btn btn-outline-secondary" (click)="showPassword = !showPassword">
+                <i class="bi" [ngClass]="{'bi-eye-fill': !showPassword, 'bi-eye-slash-fill': showPassword}"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-grid">
+            <button type="button" (click)="onSignup()" class="btn btn-sm btn-success" [disabled]="loading">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" *ngIf="isConfirm">
+        <div class="row">
+          <div class="col mb-2">
+            <label for="code" class="form-label">Code:</label>
+            <input type="text" id="code" name="code" #code="ngModel" [(ngModel)]="verificationCode" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-grid">
+            <button type="button" (click)="confirmSignUp()" class="btn btn-sm btn-success" [disabled]="loading">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

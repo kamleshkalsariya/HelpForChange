@@ -1,0 +1,20 @@
+.login{
+    border-radius: 20px;
+    margin-top: 25%;
+}
+
+.footer{
+    margin-top: 8%;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.input-container{
+    display: -ms-flexbox;
+    display: flex;
+    width:100%;
+    margin-bottom: 14px;  
+}
+

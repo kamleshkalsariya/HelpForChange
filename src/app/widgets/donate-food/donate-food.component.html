@@ -1,0 +1,46 @@
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="staticBackdropLabel">Donate Food</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- <div>Fill the details</div>  -->
+            <form>
+                <mat-form-field appearance="outline">
+                    <mat-label>Type</mat-label>
+                    <input matInput placeholder="BreakFast/Lunch/Dinner" [(ngModel)]="type" name="type">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Date</mat-label>
+                    <input matInput placeholder="Enter Date" [(ngModel)]="date" name="date">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="Enter Full Name" [(ngModel)]="fullName" name="fullName">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile No.</mat-label>
+                    <input matInput placeholder="Enter Mobile No." [(ngModel)]="mobileNo" name="mobileNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Food Items</mat-label>
+                    <input matInput placeholder="Enter Food Items" [(ngModel)]="foodItems" name="foodItems">
+                </mat-form-field>
+                <br>
+                <div *ngIf="formStatus" style="color: green;">Form submitted successfully</div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onUpload()">Post</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="staticBackdropLabel">User Detail Form</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- <div>Fill the details</div>  -->
+            <form>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Enter Name" [(ngModel)]="fname" name="fname">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile No.</mat-label>
+                    <input matInput placeholder="Enter Mobile No." [(ngModel)]="mobileNo" name="mobileNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Occupation</mat-label>
+                    <input matInput placeholder="Enter Occupation" [(ngModel)]="occupation" name="occupation">
+                </mat-form-field>
+
+                <div>
+                    <input class="form-control" type="file" (change)="onChange($event)" multiple>
+                </div>
+                <br>
+                <div *ngIf="formStatus" style="color: green;">Userdata updated successfully</div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onUpload()">Post</button>
+        </div>
+    </div>
+</div>

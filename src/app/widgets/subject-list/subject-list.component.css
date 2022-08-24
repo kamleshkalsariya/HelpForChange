@@ -1,0 +1,55 @@
+
+.form-floating{
+  height:3.5rem;
+  line-height: 1.25;
+}
+
+  .card-img-top{
+    height:300px; 
+    width:100%;
+  }
+
+  .card-title{
+    margin-top:-1em;;
+    margin-bottom: -0.1em;
+  }
+
+  .btn{
+    margin-top: 0.6rem;
+  }
+
+  .group-card{
+    height :350px;
+  }
+  
+  a {
+    background-color: #f6f8f9;
+    border-radius: 2px;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    min-width: 100%;
+    margin: .1rem auto;
+    box-sizing: border-box;
+  
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+  
+  @media (min-width: 600px) {
+    a {
+      width: 18%;
+      box-sizing: content-box;
+    }
+  }
+  
+  a:hover {
+    background-color: rgb(8, 123, 237);
+  }
+
+  

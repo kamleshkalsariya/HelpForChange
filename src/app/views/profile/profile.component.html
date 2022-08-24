@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<hr>
+<div class="container">
+    <div class="card mb-6" style="max-width: 60%;margin-left:20%">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{userData.imgURL}}" class="img-fluid rounded-start" style="height:100%; width:auto">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Name : </b>{{userData.name}}</h4>
+                    <h4 class="card-title"><b>Email : </b>{{email}}</h4>
+                    <h4 class="card-title"><b>Mobile No : </b>{{userData.mobileNo}}</h4>
+                    <h4 class="card-title"><b>Occupation : </b>{{userData.occupation}}</h4>
+                    <button type="button" class="btn btn-primary b-2" data-bs-toggle="modal" data-bs-target="#updateuser">
+                        Update Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateuser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="updateuser" aria-hidden="true">
+  <app-user-detail></app-user-detail>
+</div>
+
+<div class="overflow-auto grouplist py-4">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let request of requestList" class="col-sm-3 mb-4">
+                <div class="card" *ngIf = "request.type == 'Education'" style="max-height:100%">
+                    <h3 class="card-header">{{request.type}}</h3>
+                    <div class="card-body">
+                        <h4 class="card-title"><b>SubjectId :</b> {{request.subject}}_{{request.standard}}</h4>
+                        <h4 class="card-title"><b>Chapter Name :</b> {{request.chapterName}}</h4>
+                        <h4 class="card-title"><b>Start Date :</b> {{request.startDate}}</h4>
+                        <h4 class="card-title"><b>Status :</b> {{request.status}}</h4>
+                    </div>
+                </div>
+                <div class="card" *ngIf = "request.type == 'Food'">
+                    <h3 class="card-header">{{request.type}}</h3>
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Type :</b> {{request.subject}}</h4>
+                        <h4 class="card-title"><b>Food Items :</b> {{request.chapterName}}</h4>
+                        <h4 class="card-title"><b>Date :</b> {{request.startDate}}</h4>
+                        <h4 class="card-title"><b>Status :</b> {{request.status}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

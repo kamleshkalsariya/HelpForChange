@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mb-4">
+            <div class="card text-center">
+                <img src="../../../assets/breakfast.png" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button type="button" class="btn btn-primary b-1" data-bs-toggle="modal" data-bs-target="#donatefood">
+                     Donate
+                  </button>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4 mb-4">
+            <div class="card text-center">
+                <img src="../../../assets/lunch.png" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button type="button" class="btn btn-primary b-1" data-bs-toggle="modal" data-bs-target="#donatefood">
+                     Donate
+                  </button>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4 mb-4">
+            <div class="card text-center">
+                <img src="../../../assets/dinner.png" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button type="button" class="btn btn-primary b-1" data-bs-toggle="modal" data-bs-target="#donatefood">
+                     Donate
+                  </button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="donatefood" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="donatefood" aria-hidden="true">
+  <app-donate-food></app-donate-food>
+</div>

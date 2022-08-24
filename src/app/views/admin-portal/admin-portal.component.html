@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<hr>
+<div class="row">
+  <div class = "col mb-3"></div>
+  <div class="col mb-1">
+    <button type="button" class="btn btn-primary b-1" data-bs-toggle="modal" data-bs-target="#addsubject">
+      + Add Subject
+    </button>
+  </div>
+  <div class="col mb-1">
+    <button type="button" class="btn btn-primary b-2" data-bs-toggle="modal" data-bs-target="#addchapter">
+      + Add Chapter
+    </button>
+  </div>
+  <div class="col mb-1">
+    <button type="button" class="btn btn-primary b-2" data-bs-toggle="modal" data-bs-target="#updatechapter">
+      + Update Chapter
+    </button>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addsubject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="addsubject" aria-hidden="true">
+  <app-add-subject></app-add-subject>
+</div>
+
+<div class="modal fade" id="addchapter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="addchapter" aria-hidden="true">
+  <app-add-chapter></app-add-chapter>
+</div>
+
+<div class="modal fade" id="updatechapter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="updatechapter" aria-hidden="true">
+  <app-update-chapter></app-update-chapter>
+</div>
+
+<app-request></app-request>
+<app-footer></app-footer>

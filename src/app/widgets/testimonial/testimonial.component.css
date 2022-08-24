@@ -1,0 +1,10 @@
+.carousel-item{
+    height:auto;
+    background: no-repeat scroll centre scroll;
+    -webkit-background-size:cover;
+    background-size: cover;
+  }
+.card{
+  width:60%;
+  margin-left:20%;
+}

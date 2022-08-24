@@ -1,0 +1,56 @@
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="staticBackdropLabel">Service Detail Form</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- <div>Fill the details</div>  -->
+            <form>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Enter name" [(ngModel)]="fname" name="fname">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile No.</mat-label>
+                    <input matInput placeholder="Enter mobile No." [(ngModel)]="mobileNo" name="mobileNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Degree</mat-label>
+                    <input matInput placeholder="Enter degree" [(ngModel)]="degree" name="degree">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Field of Specialization(if any)</mat-label>
+                    <input matInput placeholder="Enter field of specialization" [(ngModel)]="fos" name="fos">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Hospital Address</mat-label>
+                    <input matInput placeholder="Enter address" [(ngModel)]="address" name="address">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Service-Day(Time)</mat-label>
+                    <input matInput placeholder="Enter multiple value by '/' for ex. Mon(10-11 am)/Tue(5-6 pm)" [(ngModel)]="service" name="service">
+                </mat-form-field>
+
+
+                <div>
+                    <input class="form-control" type="file" (change)="onChange($event)" multiple>
+                </div>
+                <br>
+                <div *ngIf="formStatus" style="color: green;">Profile added successfully</div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onUpload()">Post</button>
+        </div>
+    </div>
+</div>

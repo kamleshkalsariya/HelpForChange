@@ -1,0 +1,47 @@
+.main-container {
+    background-color: rgb(60, 155, 244);
+  }
+  
+  .complaints_number {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46.2px;
+    line-height: 100%;
+    align-items: center;
+    color: #29279A
+  }
+  
+  .complaints_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #29279A;
+  }
+  
+  .color1 {
+    color: #1CE4E6;
+  }
+  
+  .color2 {
+    color: #FE6F50;
+  }
+  
+  .button-add{
+    font-family: Poppins;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #3330CB;
+    border-radius: 10px;
+  }

@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-md sticky-top py-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/home']"><img src="../../../assets/logo.png" class="logo"></a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <mat-icon class="blue">more_vert</mat-icon>
+        </button>
+
+    <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['/home']"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/education']"><b>Education</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/food']"><b>Food</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/health']"><b>Health</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+                <mat-icon class="blue">message</mat-icon>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <mat-icon class="blue">person_outline</mat-icon>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" [routerLink]="['/profile']">Profile</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/admin']">Admin</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/signIn']">Sign In</a></li>
+              <li><a class="dropdown-item" (click)="onLogout()">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+        <ul class="navbar-nav ml-auto mr-4">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mat-icon class="white">notifications_none</mat-icon>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <mat-icon class="white">person_outline</mat-icon>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" [routerLink]="['/details']">Profile</a>
+                     <a class="dropdown-item" href="#" (click)="SignOut()">Logout</a>
+                    <a class="dropdown-item disabled" href="#">More</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mat-icon class="white">message</mat-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mat-icon class="white">help_outline</mat-icon>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+    </div>
+  </nav>

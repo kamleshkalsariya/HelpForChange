@@ -1,0 +1,44 @@
+<div class="container py-4">
+    <div class="columns">
+      <div class="column col-12">
+        <div class="row justify-content-between">
+        </div>
+      </div>
+      <div class="column col-12 overflow-auto">
+        <ngx-table [configuration]="configuration" [data]="data" #table [columns]="columns">
+          <ng-template let-row>
+            <td>
+              <span class="font-small">{{ row.type? row.type : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.name? row.name : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.mobileNo? row.mobileNo: "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.subject? row.subject : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.standard? row.standard : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.chapterName? row.chapterName : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.startDate? row.startDate : "NA" }}</span>
+            </td>
+            <td>
+              <span class="font-small">{{ row.status? row.status : "NA" }}</span>
+            </td>
+            <td *ngIf = "row.status === 'Pending'">
+              <!-- <a class="link" role="button" (click)="updateChapterTable(row)" (click)="updateUserTable(row)">
+                <span class="fa fa-ellipsis-h">Assign</span>
+              </a> -->
+              <button type="button" class="btn btn-primary btn-sm" (click)="updateChapterTable(row)" (click)="updateUserTable(row)">Assign</button>
+            </td>
+          </ng-template>
+        </ngx-table>
+      </div>
+    </div>
+  </div>

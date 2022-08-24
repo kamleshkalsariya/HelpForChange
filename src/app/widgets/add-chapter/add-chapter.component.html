@@ -1,0 +1,50 @@
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="staticBackdropLabel">Chapter Form</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- <div>Fill the details</div>  -->
+            <form>
+                <mat-form-field appearance="outline">
+                    <mat-label>Subject</mat-label>
+                    <input matInput placeholder="Enter title" [(ngModel)]="subject" name="subject">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Standard</mat-label>
+                    <input matInput placeholder="Enter description" [(ngModel)]="standard" name="standard">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Chapter No.</mat-label>
+                    <input matInput placeholder="Enter description" [(ngModel)]="chapterNo" name="chapterNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Chapter Name</mat-label>
+                    <input matInput placeholder="Enter description" [(ngModel)]="chapterName" name="chapterName">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Total Lecture</mat-label>
+                    <input matInput placeholder="Required Lecture" [(ngModel)]="noOfLecture" name="noOfLecture">
+                </mat-form-field>
+
+                <div>
+                    <input class="form-control" type="file" (change)="onChange($event)" multiple>
+                </div>
+                <br>
+                <div *ngIf="formStatus" style="color: green;">Chapter added successfully</div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onUpload()">Post</button>
+        </div>
+    </div>
+</div>

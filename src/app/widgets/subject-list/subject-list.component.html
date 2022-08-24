@@ -1,0 +1,83 @@
+<div class="row g-2">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+        <div class="form-floating">
+            <select #Subject class="form-select" id="floatingSelectGrid">
+              <option selected>All</option>
+              <option value="Maths">Maths</option>
+              <option value="English">English</option>
+              <option value="Science">Science</option>
+              <option value="Social Science">Social Science</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+            <label for="floatingSelectGrid">Choose Subject</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-floating">
+        <select #Standards class="form-select" id="floatingSelectGrid">
+          <option selected>All</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <label for="floatingSelectGrid">Choose standard(From)</label>
+      </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-floating">
+          <select #Standarde class="form-select" id="floatingSelectGrid">
+            <option selected>All</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <label for="floatingSelectGrid">Choose standard(To)</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-primary" (click)="onApply(Subject.value,Standards.value,Standarde.value)">Apply</button>
+    </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"><br></div>
+        <div class="col-md-1"></div>
+        <div *ngFor="let sub of subject" class="col-md-2 d-flex align-items-stretch">
+              <div class="card text-bg-light border-secondary mb-3" >
+                  <img class="card-img-top" src="{{sub.imgURL}}" alt="Card image cap" > 
+                  <div class="card-body text-center">
+                    <h3 class="card-title"><b>{{sub.subjectID}}</b></h3>
+                    <h4 class = "card-subtitle mb-2 text-muted">{{sub.standard}}</h4>
+                    <a routerLink="/{{sub.subjectID}}/{{sub.standard}}" class="btn btn-primary">Details Page</a> 
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div> 
+                  <div class="card-footer text-center pb-0">
+                    <a routerLink="/{{sub.subjectID}}/{{sub.standard}}">
+                      <small class="text-muted">Details Page</small>
+                    </a> 
+                  </div>
+              </div>
+              <br>
+          </div>
+    </div> 
+</div> -->
+
+<div class="overflow-auto grouplist py-4">
+  <div class ="container">
+    <div class="row">
+      <div *ngFor="let sub of subject" class="col-sm-3 mb-4">
+        <a class="link" role="button" routerLink="/{{sub.subject}}/{{sub.standard}}">
+        <mat-card class="group-card">
+            <img class="card-img-top" src="{{sub.imgURL}}" alt="Card image cap" >
+          <div class="card-title fw-bold mt-2">{{sub.subject}} - {{sub.standard}}</div>
+        </mat-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

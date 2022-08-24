@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<table class="table table-striped table-bordered" id="users">
+  <thead>
+    <tr>
+      <th scope="col">Chapter No.</th>
+      <th scope="col">Chapter Name</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Total Time (hrs.)</th>
+      <th scope="col">Status</th>
+      <th scope="col">Pdf</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let chapter of chapterList">
+      <td scope="row">{{chapter.chapterNo}}</td>
+      <td>{{chapter.chapterName}}</td>
+      <td>{{chapter.startDate}}</td>
+      <td>{{chapter.noOfLecture}}</td>
+      <td>{{chapter.status}}</td>
+      <td><a href="{{chapter.pdfURL}}" style = "text-decoration: none;">Download</a></td>
+      <td *ngIf = "chapter.status === 'Open'"><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#apply" (click)="onSelect(chapter)">Apply</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="modal fade" id="apply" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="apply" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">Application Form</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <div>Fill the details</div>  -->
+        <form>
+          <mat-form-field appearance="outline">
+            <mat-label>Chapter No.</mat-label>
+            <input matInput placeholder="Enter chapter No." [(ngModel)]="chapterNo" name="chapterNo">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Chapter Name</mat-label>
+            <input matInput placeholder="Enter chapter Name" [(ngModel)]="chapterName" name="chapterName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Tentative Start Date</mat-label>
+            <input matInput placeholder="Enter Date" [(ngModel)]="startDate" name="startDate">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Enter name" [(ngModel)]="fullName" name="fullName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile No.</mat-label>
+            <input matInput placeholder="Enter Mobile No." [(ngModel)]="mobileNo" name="mobileNo">
+          </mat-form-field>
+          <br>
+          <div *ngIf="formStatus" style="color: green;">Form submitted successfully</div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onUpload()">Post</button>
+      </div>
+    </div>
+  </div>
+</div>

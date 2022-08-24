@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class=" login  col-md-6 shadow-lg p-3 mb-5 bg-white">
+            <div class="text-center text-dark"><br>
+                <img src='../../../assets/logo.png' class="" width="60%">
+            </div><br>
+            <form (ngSubmit)="onSignIn(f)" #f="ngForm">
+  
+              <div class="form-group input-container">
+                <input type="email" name="email" id="email" ngModel [(ngModel)]="email_address" class="form-control input-field"
+                  placeholder="Email address" required>
+              </div>
+  
+              <div class="form-group input-container">
+                <input type="password" name="password" id="password" ngModel [(ngModel)]="password" placeholder="Enter your password"
+                  class="form-control input-field" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block" style="background: #7380E4;">
+                  Login</button>
+              </div>
+              <br>
+              <div *ngIf="login_failed" style="color: red; padding-bottom: 15px;">Incorret Username or Password</div>
+            <div>
+              <a class = "link" routerLink="/register">
+              <div class="text-center">Don't have an account? &nbsp;</div>
+                </a>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>

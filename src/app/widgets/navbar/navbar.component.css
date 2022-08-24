@@ -1,0 +1,33 @@
+.blue{
+    color:rgb(3, 36, 97);
+}
+
+.nav-link{
+    font-size: 18px;
+    text-align: center;
+    color:rgb(3, 36, 97);
+}
+
+.navbar{
+    /* background-color: #bc6fe8; */
+    background-color: rgb(255, 255, 255);  
+}
+
+.navbar-nav{
+    margin-top:7px;
+}
+
+.logo{
+    width:200px;
+    height:40px;
+}
+.nav-item{
+    font-size:medium;
+    font-family:Arial, FontAwesome;
+    transition: width 0.4s ease-in-out;
+    color:rgb(53, 118, 237);
+}
+
+.nav-link:hover {
+    opacity: 80%;
+  }
